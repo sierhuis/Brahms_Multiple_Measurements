@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE AGENT SYSTEM "file:////Applications/AgentEnvironment/DTD/agent.dtd"> 
+<!-- Generated at Wed Jun 19 15:43:41 PDT 2024 -->
+
+<AGENT name="Agent_Service" serializable="false" display="Agent_Service">
+	<MEMBEROF ref="brahms.base.SystemGroup" />
+	<ACTIVITIES>
+		<COMM_ACT name="Agent_Service.sendMeasurement" descriptor="sendMeasurement(I)" display="sendMeasurement" maxDuration="i" when="end">
+			<PARAMETERS>
+				<PARAMETER name="i" type="int" />
+			</PARAMETERS>
+			<WITH>
+				<WITHREF ref="Patient" objType="Agent" />
+			</WITH>
+			<ABOUT>
+				<SEND contentType="condition">
+					<CONDITION>
+						<VALUECOMPARISON relation="eq">
+							<EXPRESSION>
+								<OPERAND type="OA" objType="concept" objTypeDetail="Agent" objRef="Patient" attRef="Patient.m_Measurements"/>
+							</EXPRESSION>
+							<EXPRESSION>
+								<OPERAND type="UNKNOWN"/>
+							</EXPRESSION>
+						</VALUECOMPARISON>
+					</CONDITION>
+				</SEND>
+			</ABOUT>
+		</COMM_ACT>
+	</ACTIVITIES>
+	<WORKFRAMES>
+		<WORKFRAME name="Agent_Service.wf_sendAlert" display="wf_sendAlert" wftype="1">
+			<WF_DO>
+				<CONSEQUENCE factCertainty="0">
+					<CONDITION>
+						<VALUECOMPARISON relation="eq">
+							<EXPRESSION>
+								<OPERAND type="OA" objType="concept" objTypeDetail="Agent" objRef="Patient" attRef="Patient.m_Measurements" collectionIndexType="int" collectionIndex="0"/>
+							</EXPRESSION>
+							<EXPRESSION>
+								<OPERAND type="O" objType="concept" objTypeDetail="Object" objRef="Measurement_1"/>
+							</EXPRESSION>
+						</VALUECOMPARISON>
+					</CONDITION>
+				</CONSEQUENCE>
+				<CONSEQUENCE factCertainty="0">
+					<CONDITION>
+						<VALUECOMPARISON relation="eq">
+							<EXPRESSION>
+								<OPERAND type="OA" objType="concept" objTypeDetail="Agent" objRef="Patient" attRef="Patient.m_Measurements" collectionIndexType="int" collectionIndex="1"/>
+							</EXPRESSION>
+							<EXPRESSION>
+								<OPERAND type="O" objType="concept" objTypeDetail="Object" objRef="Measurement_2"/>
+							</EXPRESSION>
+						</VALUECOMPARISON>
+					</CONDITION>
+				</CONSEQUENCE>
+				<CONSEQUENCE factCertainty="0">
+					<CONDITION>
+						<VALUECOMPARISON relation="eq">
+							<EXPRESSION>
+								<OPERAND type="OA" objType="concept" objTypeDetail="Agent" objRef="Patient" attRef="Patient.m_Measurements" collectionIndexType="int" collectionIndex="2"/>
+							</EXPRESSION>
+							<EXPRESSION>
+								<OPERAND type="O" objType="concept" objTypeDetail="Object" objRef="Measurement_3"/>
+							</EXPRESSION>
+						</VALUECOMPARISON>
+					</CONDITION>
+				</CONSEQUENCE>
+				<CONSEQUENCE factCertainty="0">
+					<CONDITION>
+						<VALUECOMPARISON relation="eq">
+							<EXPRESSION>
+								<OPERAND type="OA" objType="concept" objTypeDetail="Agent" objRef="Patient" attRef="Patient.m_Measurements" collectionIndexType="int" collectionIndex="3"/>
+							</EXPRESSION>
+							<EXPRESSION>
+								<OPERAND type="O" objType="concept" objTypeDetail="Object" objRef="Measurement_4"/>
+							</EXPRESSION>
+						</VALUECOMPARISON>
+					</CONDITION>
+				</CONSEQUENCE>
+				<ACTIVITYREF ref="sendMeasurement(I)">
+					<PARAMVALS>
+						<PARAMVAL value="0" valueType="int"/>
+					</PARAMVALS>
+				</ACTIVITYREF>
+			</WF_DO>
+		</WORKFRAME>
+	</WORKFRAMES>
+</AGENT>

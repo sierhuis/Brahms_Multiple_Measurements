@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE CLASS SYSTEM "file:////Applications/AgentEnvironment/DTD/class.dtd"> 
+<!-- Generated at Wed Jun 19 15:43:41 PDT 2024 -->
+
+<CLASS name="Measurement" serializable="false" display="Measurement">
+	<EXTENDS ref="brahms.base.SystemClass" />
+	<ATTRIBUTES>
+		<ATTRIBUTE name="Measurement.name" display="name" scope="public" type="string"/>
+	</ATTRIBUTES>
+</CLASS>

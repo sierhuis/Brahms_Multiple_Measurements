@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE AGENT SYSTEM "file:////Applications/AgentEnvironment/DTD/agent.dtd"> 
+<!-- Generated at Wed Jun 19 15:43:41 PDT 2024 -->
+
+<AGENT name="Patient" serializable="false" display="Patient">
+	<MEMBEROF ref="brahms.base.SystemGroup" />
+	<ATTRIBUTES>
+		<ATTRIBUTE name="Patient.m_Measurements" display="m_Measurements" scope="public" type="map"/>
+	</ATTRIBUTES>
+	<ACTIVITIES>
+		<PRIM_ACT name="Patient.evaluateCareplan" descriptor="evaluateCareplan(ILMeasurement;)" display="evaluateCareplan" maxDuration="i">
+			<PARAMETERS>
+				<PARAMETER name="i" type="int" />
+				<PARAMETER name="measure" type="Measurement" typeDetail="Class" />
+			</PARAMETERS>
+		</PRIM_ACT>
+	</ACTIVITIES>
+	<WORKFRAMES>
+		<WORKFRAME name="Patient.wf_NewMeasurementData" display="wf_NewMeasurementData" wftype="1">
+			<VARIABLES>
+				<VARIABLE name="i" display="i" quantification="foreach" type="int"/>
+				<VARIABLE name="o_Measurement" display="o_Measurement" quantification="foreach" type="Measurement" typeDetail="Class"/>
+			</VARIABLES>
+			<WHEN>
+				<PRECONDITION modifier="knownval">
+					<CONDITION>
+						<VALUECOMPARISON relation="eq">
+							<EXPRESSION>
+								<OPERAND type="OA" objType="current" objRef="current" attRef="Patient.m_Measurements" collectionIndexType="variable" collectionIndex="i"/>
+							</EXPRESSION>
+							<EXPRESSION>
+								<OPERAND type="O" objType="variable" objRef="o_Measurement"/>
+							</EXPRESSION>
+						</VALUECOMPARISON>
+					</CONDITION>
+				</PRECONDITION>
+			</WHEN>
+			<WF_DO>
+				<ACTIVITYREF ref="println_c(SMConcept;)">
+					<PARAMVALS>
+						<PARAMVAL value="Evaluate %1" valueType="string"/>
+						<PARAMVAL value="o_Measurement" valueType="Variable"/>
+					</PARAMVALS>
+				</ACTIVITYREF>
+				<ACTIVITYREF ref="evaluateCareplan(ILMeasurement;)">
+					<PARAMVALS>
+						<PARAMVAL value="1" valueType="int"/>
+						<PARAMVAL value="o_Measurement" valueType="Variable"/>
+					</PARAMVALS>
+				</ACTIVITYREF>
+			</WF_DO>
+		</WORKFRAME>
+	</WORKFRAMES>
+</AGENT>

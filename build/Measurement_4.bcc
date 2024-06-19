@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE OBJECT SYSTEM "file:////Applications/AgentEnvironment/DTD/object.dtd"> 
+<!-- Generated at Wed Jun 19 15:43:41 PDT 2024 -->
+
+<OBJECT name="Measurement_4" serializable="false" display="Measurement_4">
+	<INSTANCEOF ref="Measurement" />
+	<FACTS>
+		<FACT>
+			<OAV lObjRef="current" lObjType="Current" attRef="Measurement.name" evalOp="eq" value="Measurement_4" valueType="string"/>
+		</FACT>
+	</FACTS>
+</OBJECT>
