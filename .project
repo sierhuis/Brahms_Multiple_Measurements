@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Brahms_Multiple_Measurements</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>gov.nasa.arc.brahms.eclipse.core.brahmsbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>gov.nasa.arc.brahms.eclipse.core.brahmsnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>build</name>
+			<type>2</type>
+			<location>/Users/sierhum/Documents/workspace/Brahms_Multiple_Measurements/build</location>
+		</link>
+		<link>
+			<name>source</name>
+			<type>2</type>
+			<location>/Users/sierhum/Documents/workspace/Brahms_Multiple_Measurements/source</location>
+		</link>
+	</linkedResources>
+</projectDescription>
