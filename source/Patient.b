@@ -36,7 +36,7 @@ agent Patient memberof SystemGroup {
 		We need to change the Agent Service code to pass the array of measurements to the Brahms agent.
 	*/
 		workframe wf_NewMeasurementData {
-			repeat: false; // this is by default false, but just to point out we don't want to fire the wf for the same alert more than once.
+			repeat: true; // this is by default false, but we want to fire the wf for the same alert more than once.
 			variables:
 				foreach(Measurement) o_Measurement; // this makes the wf fire for each measurement belief the agent gets as part of the array (i.e. map)
 				foreach(int) i; // this makes the wf loop over all measurements in the array (i.e. map)
@@ -44,6 +44,7 @@ agent Patient memberof SystemGroup {
 			do {				
 				println_c("Evaluate %1", o_Measurement); // just print the measurement name being processed.
 				evaluateCareplan(1, o_Measurement); // just to take some simulation time, in this case 1 sec simulated time;
+				retractBelief(current, "m_Measurements", i); //delete this belief, so the wf won't fire again and also to keep the belief set constant
 			} //do
 		} //wf_NewMeasurementData
 		
