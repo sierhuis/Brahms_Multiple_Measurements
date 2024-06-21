@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry path="source" kind="src"/>
-	<classpathentry path="gov.nasa.arc.brahms.eclipse.core.AGENT_ENVIRONMENT_CONTAINER" kind="brahmscon"/>
-	<classpathentry path="/Users/sierhum/Documents/workspace/Brahms_Multiple_Measurements/source/MultipleMeasurements.b" kind="modelfile"/>
-	<classpathentry path="build" kind="output"/>
-	<classpathentry generate="false" path="" kind="archivefile"/>
-</classpath>
+.classpath
+.project
+.DS_Store
+.gitignore
