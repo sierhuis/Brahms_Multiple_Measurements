@@ -1,16 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" ?> 
-<!DOCTYPE MODEL SYSTEM "file:////Applications/AgentEnvironment/DTD/model.dtd"> 
-<!-- Generated at Wed Jun 19 15:43:41 PDT 2024 -->
 
-<MODEL name="MultipleAlerts">
-	<AGENTREF ref="brahms.base.ANY-AGENT" />
-	<AGENTREF ref="Agent_Service" />
-	<AGENTREF ref="Patient" />
-	<OBJECTREF ref="brahms.base.Date" />
-	<OBJECTREF ref="Measurement_4" />
-	<OBJECTREF ref="Measurement_3" />
-	<OBJECTREF ref="Measurement_2" />
-	<OBJECTREF ref="Measurement_1" />
-	<OBJECTREF ref="brahms.base.Clock" />
-	<AREAREF ref="brahms.base.NoLocation" />
-</MODEL>
