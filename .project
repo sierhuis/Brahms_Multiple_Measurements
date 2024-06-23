@@ -18,12 +18,12 @@
 		<link>
 			<name>build</name>
 			<type>2</type>
-			<location>/Users/sierhum/Documents/workspace/Brahms_Multiple_Measurements/build</location>
+			<location>/Users/sierhuis/workspace/Brahms_Multiple_Measurements/build</location>
 		</link>
 		<link>
 			<name>source</name>
 			<type>2</type>
-			<location>/Users/sierhum/Documents/workspace/Brahms_Multiple_Measurements/source</location>
+			<location>/Users/sierhuis/workspace/Brahms_Multiple_Measurements/source</location>
 		</link>
 	</linkedResources>
 </projectDescription>
