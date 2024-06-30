@@ -42,7 +42,9 @@ agent Patient memberof SystemGroup {
 				foreach(int) i; // this makes the wf loop over all measurements in the array (i.e. map)
 			when ((current.m_Measurements(i) = o_Measurement))
 			do {				
-				println_c("Evaluate %1", o_Measurement); // just print the measurement name being processed.
+				println_c("Evaluate %1 ", o_Measurement); // just print the measurement name being processed.
+				println_n("from index [%1]", i);
+				println("");
 				evaluateCareplan(1, o_Measurement); // just to take some simulation time, in this case 1 sec simulated time;
 				retractBelief(current, "m_Measurements", i); //delete this belief, so the wf won't fire again and also to keep the belief set constant
 			} //do

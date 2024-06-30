@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE AGENT SYSTEM "file:////Applications/AgentEnvironment/DTD/agent.dtd"> 
+<!-- Generated at Thu Jun 27 20:21:10 PDT 2024 -->
+
+<AGENT name="Java_Agent_Service" external="true">
+</AGENT>

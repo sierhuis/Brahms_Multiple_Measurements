@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <!DOCTYPE AGENT SYSTEM "file:////Applications/AgentEnvironment/DTD/agent.dtd"> 
-<!-- Generated at Thu Jun 20 23:31:45 PDT 2024 -->
+<!-- Generated at Sat Jun 29 11:38:03 PDT 2024 -->
 
 <AGENT name="Patient" serializable="false" display="Patient">
 	<MEMBEROF ref="brahms.base.SystemGroup" />
@@ -38,8 +38,19 @@
 			<WF_DO>
 				<ACTIVITYREF ref="println_c(SMConcept;)">
 					<PARAMVALS>
-						<PARAMVAL value="Evaluate %1" valueType="string"/>
+						<PARAMVAL value="Evaluate %1 " valueType="string"/>
 						<PARAMVAL value="o_Measurement" valueType="Variable"/>
+					</PARAMVALS>
+				</ACTIVITYREF>
+				<ACTIVITYREF ref="println_n(SI)">
+					<PARAMVALS>
+						<PARAMVAL value="from index [%1]" valueType="string"/>
+						<PARAMVAL value="i" valueType="Variable"/>
+					</PARAMVALS>
+				</ACTIVITYREF>
+				<ACTIVITYREF ref="println(S)">
+					<PARAMVALS>
+						<PARAMVAL value="" valueType="string"/>
 					</PARAMVALS>
 				</ACTIVITYREF>
 				<ACTIVITYREF ref="evaluateCareplan(ILMeasurement;)">

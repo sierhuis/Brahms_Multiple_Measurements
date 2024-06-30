@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?> 
 <!DOCTYPE CLASS SYSTEM "file:////Applications/AgentEnvironment/DTD/class.dtd"> 
-<!-- Generated at Wed Jun 19 15:43:41 PDT 2024 -->
+<!-- Generated at Thu Jun 27 20:21:10 PDT 2024 -->
 
 <CLASS name="Measurement" serializable="false" display="Measurement">
 	<EXTENDS ref="brahms.base.SystemClass" />
